@@ -1,0 +1,1 @@
+int stat(char* p, char ch);
