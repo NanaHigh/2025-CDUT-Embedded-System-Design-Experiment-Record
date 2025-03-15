@@ -6,8 +6,8 @@ SRC = ex4.c
 OBJS = $(addprefix $(DIR)/, $(SRC:.c=.o))
 
 all: $(OBJS)
-$(OBJS): ex4.c | dir
-	$(CC) -c ex4.c -o $@
+$(OBJS): $(SRC) | dir
+	$(CC) -c $(SRC) -o $@
 	sudo cp $(OBJS) $(FTFP_DIR)
 dir:
 	mkdir -p $(DIR)
